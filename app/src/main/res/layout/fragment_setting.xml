@@ -16,7 +16,7 @@
 
         <TextView
             style="@style/viewParent.headerText"
-            android:text="Settings" />
+            android:text="Cài đặt" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,21 +26,21 @@
                 android:id="@+id/profileCircleImageView"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/logo2"
+                android:src="@drawable/user"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="10dp"/>
 
             <TextView
                 android:id="@+id/usernameTextView"
                 style="@style/viewParent.headerText"
-                android:text="Kapil Mohan"
+                android:text="Vũ Xuân Điệp"
                 android:textSize="18sp"
                 android:layout_toRightOf="@id/profileCircleImageView"
                 android:layout_marginTop="20dp"/>
 
             <TextView
                 style="@style/viewParent.headerText"
-                android:text="Edit personal details"
+                android:text="Thay đổi thông tin cá nhân"
                 android:textSize="16sp"
                 android:textColor="#5D5C5C"
                 android:layout_below="@id/usernameTextView"
@@ -58,50 +58,70 @@
             android:id="@+id/darkModeSwitch"
             style="@style/settingsText"
             android:drawableLeft="@drawable/ic_dark_mode"
+            android:background="@drawable/edit"
             android:text="Dark Mode" />
 
         <TextView
             style="@style/viewParent.headerText.settingsMiniTitle"
+            android:background="@drawable/edit"
             android:text="Profile"/>
 
         <TextView
+            android:id="@+id/txtShare"
             style="@style/viewParent.headerText.settingsTextIcon"
-            android:drawableLeft="@drawable/ic_edit_profile"
-            android:text="Edit Profile" />
+            android:drawableLeft="@drawable/share"
+            android:background="@drawable/edit"
+            android:text="Chia sẻ" />
 
         <TextView
+            android:id="@+id/txtChangepassword"
             style="@style/viewParent.headerText.settingsTextIcon"
-            android:drawableLeft="@drawable/ic_edit_password"
+            android:drawableLeft="@drawable/changepassword"
             android:layout_marginTop="10dp"
-            android:text="Change Password" />
+            android:background="@drawable/edit"
+            android:text="Thay đổi mật khẩu" />
 
         <TextView
             style="@style/viewParent.headerText.settingsMiniTitle"
+            android:background="@drawable/edit"
             android:text="Notifications"/>
 
         <Switch
             style="@style/settingsText"
             android:checked="true"
-            android:drawableLeft="@drawable/ic_notifications"
-            android:text="Notifications" />
+            android:drawableLeft="@drawable/notification"
+            android:text="Thông báo" />
 
         <TextView
             style="@style/viewParent.headerText.settingsMiniTitle"
+            android:background="@drawable/edit"
             android:text="Regional"/>
 
         <TextView
+            android:id="@+id/txtFeedback"
             style="@style/viewParent.headerText.settingsTextIcon"
-            android:drawableLeft="@drawable/ic_languages"
-            android:text="Language" />
+            android:drawableLeft="@drawable/feedback"
+            android:background="@drawable/edit"
+            android:text="Feedback" />
 
         <TextView
+            android:id="@+id/txtLanguages"
             style="@style/viewParent.headerText.settingsTextIcon"
-            android:drawableLeft="@drawable/ic_logout"
-            android:text="Logout" />
+            android:drawableLeft="@drawable/languages"
+            android:background="@drawable/edit"
+            android:text="Ngôn ngữ" />
+
+        <TextView
+            android:id="@+id/txtLogout"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/logout"
+            android:background="@drawable/edit"
+            android:text="Đăng xuất" />
 
 
         <TextView
             style="@style/viewParent.headerText.settingsMiniTitle"
+            android:background="@drawable/edit"
             android:text="App ver 2.0.1"
             android:textAlignment="center"/>
 

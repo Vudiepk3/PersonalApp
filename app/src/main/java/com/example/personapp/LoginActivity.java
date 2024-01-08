@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                         Intent login = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(login);
                     }
-                }, 1500); // 2000 milliseconds = 2 seconds
+                }, 1000); // 1000 milliseconds = 1 seconds
             }
         });
 
