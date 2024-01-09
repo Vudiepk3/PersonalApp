@@ -24,14 +24,10 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.home) {
                 replaceFragment(new HomeFragment());
-            } else if (item.getItemId() == R.id.message) {
-                replaceFragment(new MessageFragment());
             } else if (item.getItemId() == R.id.add) {
                 replaceFragment(new AddFragment());
             } else if (item.getItemId() == R.id.setup) {
                 replaceFragment(new SettingFragment());
-            } else if (item.getItemId() == R.id.user) {
-                replaceFragment(new AccountFragment());
             }
             return true;
         });

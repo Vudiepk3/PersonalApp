@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".SettingFragment"
     android:layout_width="match_parent"
@@ -10,8 +8,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_marginBottom="30dp"
         android:padding="30dp">
 
         <TextView
@@ -19,6 +18,7 @@
             android:text="Cài đặt" />
 
         <RelativeLayout
+            android:id="@+id/account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -103,6 +103,12 @@
             android:drawableLeft="@drawable/feedback"
             android:background="@drawable/edit"
             android:text="Feedback" />
+        <TextView
+            android:id="@+id/txtEvaluate"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/evaluate"
+            android:background="@drawable/edit"
+            android:text="Đánh giá" />
 
         <TextView
             android:id="@+id/txtLanguages"
@@ -118,12 +124,17 @@
             android:background="@drawable/edit"
             android:text="Đăng xuất" />
 
-
         <TextView
             style="@style/viewParent.headerText.settingsMiniTitle"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/edit"
             android:text="App ver 2.0.1"
             android:textAlignment="center"/>
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:background="@drawable/edit"
+            android:textAlignment="center"/>
+
 
     </LinearLayout>
 </ScrollView>

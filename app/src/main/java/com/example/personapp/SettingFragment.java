@@ -2,6 +2,7 @@ package com.example.personapp;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
@@ -12,6 +13,8 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +23,8 @@ public class SettingFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private String mParam1;
     private String mParam2;
-    private TextView txtLogout;
+    private TextView txtLogout,txtFeedback,txtEvaluate,txtShare;
+    private RelativeLayout account;
     public SettingFragment() {
         // Required empty public constructor
     }
@@ -77,7 +81,48 @@ public class SettingFragment extends Fragment {
                 backRequest.create().show();
             }
         });
+        account = view.findViewById(R.id.account);
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent  account = new Intent(getActivity(),AccountActivity.class);
+                startActivity(account);
+            }
+        });
+        txtEvaluate = view.findViewById(R.id.txtEvaluate);
+        txtEvaluate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent evaluate = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.dhcn.MyHAUI&pcampaignid=web_share"));
+                startActivity(evaluate);
+            }
+        });
+        txtFeedback = view.findViewById(R.id.txtFeedback);
+        txtFeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + "vulq2k3@gmail.com"));
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Hello");
+                    intent.putExtra(Intent.EXTRA_TEXT, "Hi");
+                    startActivity(Intent.createChooser(intent, "Send mail..."));
+                } catch(Exception e) {
+                    Toast.makeText(getActivity(), "Sorry...You don't have any mail app", Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                }
+            }
+        });
+        txtShare = view.findViewById(R.id.txtShare);
+        txtShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+                intent.putExtra(Intent.EXTRA_TEXT, "This is my text");
+                startActivity(Intent.createChooser(intent, "Hãy chia sẻ đến với mọi người"));
+            }
+        });
         return view;
     }
-
 }
