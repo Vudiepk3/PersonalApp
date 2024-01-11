@@ -57,7 +57,7 @@
             android:id="@+id/txtUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tên đăng nhập"
+            android:text="@string/username"
             android:layout_marginTop="10dp"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
@@ -74,7 +74,7 @@
             android:layout_marginEnd="12dp"
             android:background="@drawable/main1_button_background"
             android:ems="10"
-            android:hint="Enter your username"
+            android:hint="@string/enterusername"
             android:inputType="textPersonName"
             android:padding="16dp"
             android:textSize="16sp" />
@@ -86,7 +86,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:text="Mật khẩu"
+            android:text="@string/password"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18sp" />
@@ -100,7 +100,7 @@
             android:layout_marginEnd="12dp"
             android:background="@drawable/main1_button_background"
             android:ems="10"
-            android:hint="Enter your password"
+            android:hint="@string/enterpassword"
             android:inputType="textPassword"
             android:padding="16dp"
             android:textSize="16sp" />
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:textSize="18sp"
-            android:text="Lưu thông tin" />
+            android:text="@string/save" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -127,7 +127,7 @@
                 android:backgroundTint="#37386e"
                 app:cornerRadius = "50dp"
                 android:textSize="16sp"
-                android:text="Đăng Nhập" />
+                android:text="@string/signin" />
             <Button
                 android:id="@+id/btnSignup"
                 android:layout_width="match_parent"
@@ -137,7 +137,7 @@
                 android:backgroundTint="#37386e"
                 app:cornerRadius = "50dp"
                 android:textSize="16sp"
-                android:text="Đăng Ký" />
+                android:text="@string/signup" />
         </TableRow>
 
         <TextView
@@ -145,7 +145,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="Quên mật khẩu"
+            android:text="@string/forgotpassword"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp" />

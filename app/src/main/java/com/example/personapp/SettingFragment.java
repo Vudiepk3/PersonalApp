@@ -10,7 +10,11 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -23,7 +27,7 @@ public class SettingFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private String mParam1;
     private String mParam2;
-    private TextView txtLogout,txtFeedback,txtEvaluate,txtShare;
+    private TextView txtLogout,txtFeedback,txtEvaluate,txtShare,txtLanguages;
     private RelativeLayout account;
     public SettingFragment() {
         // Required empty public constructor
@@ -54,7 +58,7 @@ public class SettingFragment extends Fragment {
             public void onClick(View v) {
                 AlertDialog.Builder backRequest = new AlertDialog.Builder(getActivity());
                 backRequest.setTitle("Xác nhận đăng xuất");
-                backRequest.setMessage("Bạn có chắc chắn muốn đăng xuất");
+                backRequest.setMessage("Bạn có chắc chắn muốn đăng xuất ?");
                 backRequest.setPositiveButton("Đăng xuất", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int which) {
@@ -123,6 +127,35 @@ public class SettingFragment extends Fragment {
                 startActivity(Intent.createChooser(intent, "Hãy chia sẻ đến với mọi người"));
             }
         });
+        txtLanguages = view.findViewById(R.id.txtLanguages);
+        registerForContextMenu(txtLanguages);
         return view;
+    }
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getActivity().getMenuInflater().inflate(R.menu.languages_menu, menu);
+    }
+
+    public boolean onCreateContextMenu(MenuItem item) {
+        int id = item.getItemId();
+        if (id==R.id.VietNamese) {
+            Toast.makeText(getActivity(), "Chức năng đang trong quá trình phát triển",Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        else if (id==R.id.English) {
+            getActivity().finish();
+            return true;
+        }
+        else
+            return super.onContextItemSelected(item);
+    }
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.languages_menu, menu);
+
+        // Show icons as action items
+        menu.findItem(R.id.VietNamese).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        menu.findItem(R.id.English).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
     }
 }

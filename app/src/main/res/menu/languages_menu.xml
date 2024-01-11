@@ -1,0 +1,14 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/VietNamese"
+        android:icon="@drawable/vietnam"
+        android:title="Việt Nam"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/English"
+        android:icon="@drawable/english"
+        android:title="English"
+        app:showAsAction="ifRoom" />
+
+</menu>

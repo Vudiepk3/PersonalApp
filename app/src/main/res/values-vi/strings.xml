@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PersonApp</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="enterusername">Nhập tên đăng nhập</string>
+    <string name="enterpassword">Nhập mật khẩu</string>
+    <string name="save">Lưu thông tin</string>
+    <string name="signin">Đăng nhập</string>
+    <string name="signup">Đăng ký</string>
+    <string name="forgotpassword">Quên mật khẩu</string>
+    <string name="home">Trang chủ</string>
+    <string name="history">Lịch sử</string>
+    <string name="setting">Cài đặt</string>
+    <string name="changeprofile">Thay đổi thông tin cá nhân</string>
+    <string name="profile">Hồ sơ</string>
+    <string name="share">Chia sẻ</string>
+    <string name="changepassword">Thay đổi mật khẩu</string>
+    <string name="notifications">Thông báo</string>
+    <string name="feedback">Nhận xét</string>
+    <string name="evaluate">Đánh giá</string>
+    <string name="languages">Ngôn ngữ</string>
+    <string name="logout">Đăng xuất</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

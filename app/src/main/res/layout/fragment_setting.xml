@@ -15,7 +15,7 @@
 
         <TextView
             style="@style/viewParent.headerText"
-            android:text="Cài đặt" />
+            android:text="@string/setting" />
 
         <RelativeLayout
             android:id="@+id/account"
@@ -40,7 +40,7 @@
 
             <TextView
                 style="@style/viewParent.headerText"
-                android:text="Thay đổi thông tin cá nhân"
+                android:text="@string/changeprofile"
                 android:textSize="16sp"
                 android:textColor="#5D5C5C"
                 android:layout_below="@id/usernameTextView"
@@ -71,7 +71,7 @@
             style="@style/viewParent.headerText.settingsTextIcon"
             android:drawableLeft="@drawable/share"
             android:background="@drawable/edit"
-            android:text="Chia sẻ" />
+            android:text="@string/share" />
 
         <TextView
             android:id="@+id/txtChangepassword"
@@ -79,18 +79,18 @@
             android:drawableLeft="@drawable/changepassword"
             android:layout_marginTop="10dp"
             android:background="@drawable/edit"
-            android:text="Thay đổi mật khẩu" />
+            android:text="@string/changepassword" />
 
         <TextView
             style="@style/viewParent.headerText.settingsMiniTitle"
             android:background="@drawable/edit"
-            android:text="Notifications"/>
+            android:text="@string/notifications"/>
 
         <Switch
             style="@style/settingsText"
             android:checked="true"
             android:drawableLeft="@drawable/notification"
-            android:text="Thông báo" />
+            android:text="@string/notifications" />
 
         <TextView
             style="@style/viewParent.headerText.settingsMiniTitle"
@@ -102,27 +102,27 @@
             style="@style/viewParent.headerText.settingsTextIcon"
             android:drawableLeft="@drawable/feedback"
             android:background="@drawable/edit"
-            android:text="Feedback" />
+            android:text="@string/feedback" />
         <TextView
             android:id="@+id/txtEvaluate"
             style="@style/viewParent.headerText.settingsTextIcon"
             android:drawableLeft="@drawable/evaluate"
             android:background="@drawable/edit"
-            android:text="Đánh giá" />
+            android:text="@string/evaluate" />
 
         <TextView
             android:id="@+id/txtLanguages"
             style="@style/viewParent.headerText.settingsTextIcon"
             android:drawableLeft="@drawable/languages"
             android:background="@drawable/edit"
-            android:text="Ngôn ngữ" />
+            android:text="@string/languages" />
 
         <TextView
             android:id="@+id/txtLogout"
             style="@style/viewParent.headerText.settingsTextIcon"
             android:drawableLeft="@drawable/logout"
             android:background="@drawable/edit"
-            android:text="Đăng xuất" />
+            android:text="@string/logout" />
 
         <TextView
             style="@style/viewParent.headerText.settingsMiniTitle"

@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">PersonApp</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="enterusername">Enter your username</string>
+    <string name="enterpassword">Enter your password</string>
+    <string name="save">Save</string>
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="forgotpassword">Forgot password</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="setting">Settings</string>
+    <string name="changeprofile">Change Your Profile</string>
+    <string name="profile">Profile</string>
+    <string name="share">Share</string>
+    <string name="changepassword">Change Password</string>
+    <string name="notifications">Notifications</string>
+    <string name="feedback">Feedback</string>
+    <string name="evaluate">Evaluate</string>
+    <string name="languages">Language</string>
+    <string name="logout">Log out</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
